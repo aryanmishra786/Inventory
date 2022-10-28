@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html> 
+
+    <head>
+        <link rel="stylesheet" href="welcome.css">
+
+    <script>
+        function validateForm(){
+            let x = document.forms["regform"]["first_name"].value;
+            let y = document.forms["regform"]["address"];
+            let z = document.forms["regform"]["email_address"].value;
+            let a = document.forms["regform"]["password"].value;
+
+            if(x == ""){
+                alert("name must be filled");
+                return false;
+            }
+            if(y.value == ""){
+                alert("you must enter an address");
+                return false;
+            }
+            if(z == ""){
+                alert("you must ennter an email address");
+                return false;
+            }
+            if(a.length <"6" ){
+                alert("you must enter a 6 digit password");
+                return false;
+            }
+            if(a == ""){
+                alert("you must enter a password")
+            }
+         return true;
+
+        }
+    </script>
+     </head>
+    <body>
+        <div class="container">
+
+            
+            <h1 style="text-align:center;">WELCOME TO INVENTORY</h1>
+            <form name="regform" style="text-align: center;" onsubmit="return validateForm()">
+                <p> EMPLOYEE NAME: <br>
+                    <input type ="text" size="65" name="first_name"/>
+                </p>
+                <p>
+                    EMPLOYEE TYPE:<br>
+                    <select type="text" name="employee_type" value="">
+                        <option>Regular</option>
+                        <option>Contractual</option>
+                        
+                    </select>
+                    
+                </p>
+                <p>
+                     DIVISION:<br>
+                    <select type="text" name="DIVISION" value="">
+                        <option>ESD</option>
+                        <option>HRDG</option>
+                        <option>IT</option>
+                        <option>EMR</option>
+                        
+                    </select>
+                    
+                </p>
+                <p> ROOM NO.: <br>
+                    <input type ="text" size="65" name="first_name"/>
+                </p>
+                <p>
+                     TYPE:<br>
+                    <select type="text" name="TYPE" value="">
+                        <option>COMPUTER</option>
+                        <option>PRINTER</option>
+                        <option>SWITCHES</option>
+                        <option>SCANNER</option>
+                        <option>LAPTOP</option>
+                        <option>PHOTOCOPY MACHINE</option>
+                        
+                    </select>
+                    
+                </p>
+                
+                
+                <p>
+                    MAKE-BRAND NAME:<br>
+                    <input type="type" size="65" name="MAKE-BRAND_NAME"/>
+                </p>
+                
+                <p>
+                    MODEL NO.:<br>
+                    <input type="type" size="65" name="MODEL_NO"/>
+                </p>
+                
+                <p>
+                    SERIAL NO.:<br>
+                    <input type="type" size="65" name="SERIAL_NO"/>
+                </p>
+                <p>
+                    STATUS:<br>
+                    <select type="text" name="STATUS" value="">
+                        <option>WORKING</option>
+                        <option>NOT WORKING</option>
+                        <option>NOT IN USE</option>
+
+                    </select>
+                    <p>
+                        PROCESSOR:<br>
+                        <input type="type" size="65" name="PROCESSOR"/>
+                    </p>
+                    <p>
+                        RAM:<br>
+                        <input type="type" size="65" name="RAM"/>
+                    </p>
+                    <p>
+                        HDD:<br>
+                        <input type="type" size="65" name="HDD"/>
+                    </p>
+                    <p>
+                        PURCHASE DATE:<br>
+                        <input type="date" size="65" name="comments"/>
+                    </p>
+                    <p>
+                        WARRANTY:<br>
+                        <select type="text" name="WARRANTY" value="">
+                            <option>YES</option>
+                            <option>NO</option>
+                        </select>
+                  </p>
+                  <p>
+                    AMC:<br>
+                    <select type="text" name="AMC" value="">
+                        <option>YES</option>
+                        <option>NO</option>
+                    </select>
+                </p>            
+               
+                
+            </div>
+                
+                
+
+        </form>
+    </body>
+</html>
